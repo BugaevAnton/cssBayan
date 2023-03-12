@@ -63,7 +63,6 @@ h1{
 .bayan{
     cursor: pointer;
 }
-
 .bayan input[type="radio"] {
     overflow: hidden;
     opacity: -1;
@@ -136,9 +135,6 @@ input[type="radio"]:checked ~ .bayan-content > .images {
 .bayan1-btn:hover .bg{
     transform: translate(-50%, -50%) rotate(225deg);
 }
-/* .bayan1-btn:checked ~ .bg{
-    transform: translate(-50%, -50%) rotate(225deg);
-} */
 input[type="radio"]:checked ~ .bayan1-btn > .bg {
     transform: translate(-50%, -50%) rotate(225deg);
     border: solid #000000;

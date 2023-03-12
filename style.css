@@ -1,0 +1,145 @@
+html{
+    box-sizing: border-box;
+}
+body{
+    max-width: 120rem;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 2.18rem;
+    color: #000000;
+}
+a{
+    text-decoration: none;
+}
+ul,
+ol,
+li{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    transition: 0.3s ease;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-weight: inherit;
+    font-size: inherit;
+}
+.header{
+    background: #acabab;
+    border: 0.2rem solid #e73131;
+    border-radius: 0.62rem;
+}
+.wrapper{
+    max-width: 78rem;
+    margin: 0 auto;
+}
+.images{
+    max-width: 18rem;
+    max-height: 0;
+    transition: max-height .3s linear;
+}
+h1{
+    padding: 0.3rem 4rem;
+    font-weight: 900;
+    font-size: 2rem;
+}
+.bayan-start{
+    min-width: 50rem;
+    cursor: pointer;
+}
+.bayan{
+    cursor: pointer;
+}
+.bayan input[type="radio"] {
+    overflow: hidden;
+    opacity: -1;
+}
+input[type="radio"]:checked ~ .bayan-content {
+    max-height: 56rem;
+    transition: 3s ease-out;
+}
+/*транзишн картинок*/
+input[type="radio"]:checked ~ .bayan-content > .images {
+    max-height: 9.2rem;
+    transition: max-height .3s linear;
+}
+.bayan1-btn:hover ~ .bayan-content > .images{
+    max-height: 9.2rem;
+    transition: max-height .3s linear;
+}
+/*транзишн картинок*/
+.bayan-content{
+    max-height: 0;
+    overflow: hidden;
+    text-align: center;
+    transition: max-height 0.9s linear;
+}
+.bayan1-btn:hover ~ .bayan-content{
+    overflow: visible;
+    max-height: 56rem;
+}
+.bayan1-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 4rem;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 2.6rem;
+    color: #c21414;
+    cursor: pointer;
+}
+.line{
+    display: block;
+    content: '';
+    width: 47rem;
+    margin: 0 1.87rem;
+    height: 0.1rem;
+    background-color: rgba(82, 92, 136, 0.4);
+}
+.bayan-start:hover .bayan1-btn{
+    color: #000000;
+}
+.bg{
+    content: "";
+    visibility: hidden;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 1rem;
+    height: 1rem;
+    border: solid #000000;
+    border-width: 0 0.03rem 0.03rem 0;
+    transition: all 0.3s ease;
+}
+.bayan-start:hover .bg{
+    content: "";
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 1rem;
+    height: 1rem;
+    border: solid #000000;
+    border-width: 0 0.03rem 0.03rem 0;
+    visibility: visible;
+}
+.bayan1-btn:hover .bg{
+    transform: translate(-50%, -50%) rotate(225deg);
+}
+input[type="radio"]:checked ~ .bayan1-btn > .bg {
+    transform: translate(-50%, -50%) rotate(225deg);
+    border: solid #000000;
+    border-width: 0 0.03rem 0.03rem 0;
+}
+input[type="radio"]:checked ~ .bayan1-btn{
+    color: #000000;
+}
